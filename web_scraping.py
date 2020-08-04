@@ -14,17 +14,15 @@ from bs4 import BeautifulSoup
 	
 driver = webdriver.Firefox()
 driver.get('https://covid.saude.gov.br/')
+Aldriver.implicitly_wait(20)
 time.sleep(15)
 
-a= driver.find_element_by_class_name('lb-total')
+a= driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-router-outlet/app-home/ion-content/painel-geral-component/div/card-totalizadores-component/div/div[2]/div[2]/div[1]')
 
 html = a.get_attribute("innerHTML") 
 print(html)
-b=driver.find_element_by_class_name('card-total tp-geral')
+b=driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-router-outlet/app-home/ion-content/painel-geral-component/div/card-totalizadores-component/div/div[3]/div[2]/div[1]')
 
 html2 = b.get_attribute("innerHTML") 
 print(html2)
-data=driver.find_element_by_class_name("lb-grey")
-data_html=data.get_attribute("innerHTML") 
-print(data_html)
-casos_obitos= driver.find_element_by_class_name('lb-total')
+
