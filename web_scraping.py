@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 	
 driver = webdriver.Firefox()
 driver.get('https://covid.saude.gov.br/')
-Aldriver.implicitly_wait(20)
+driver.implicitly_wait(20)
 time.sleep(15)
 
 a= driver.find_element_by_xpath('/html/body/app-root/ion-app/ion-router-outlet/app-home/ion-content/painel-geral-component/div/card-totalizadores-component/div/div[2]/div[2]/div[1]')
