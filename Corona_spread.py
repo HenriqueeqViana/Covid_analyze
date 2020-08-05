@@ -30,10 +30,12 @@ Based on estimates for original outbreak in Wuhan
 These p #rs are pretty much guestimates, but are probably
 the right order of magnitude
 """
+
+
 import numpy as np
-import parameters as parameters
+import parametros as parameters
 from scipy import integrate
-from calculations_module import seir_function
+from Covid_model import seir_function
 import matplotlib.pyplot as plt
 
 
@@ -119,7 +121,7 @@ axes[1].set(xlabel="time (days)", ylabel="E: exposed")
 
 axes[0].legend()
 axes[1].legend()
-plt.savefig('output/susceptible.png')
+plt.savefig('C:\\Users\\henri\\Desktop\\Backup\\CT e Inovação\\Ideias\\Project_Covid\\Covid_analyze\\susceptible.png')
 plt.show()
 
 fig, axes = plt.subplots(ncols=2)
