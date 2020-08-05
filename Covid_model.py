@@ -1,5 +1,5 @@
-
 #SEIR Model for Corona retirado de @csdegraff https://github.com/csdegraaf/CoronaVirusModel
+
 
 
 
