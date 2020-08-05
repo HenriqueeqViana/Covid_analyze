@@ -1,4 +1,4 @@
-
+#Bibliotecas utilizadas e que serão utilizadas no desenvolvimento
 import pandas as pd
 import numpy as np
 import matplotlib as plt
