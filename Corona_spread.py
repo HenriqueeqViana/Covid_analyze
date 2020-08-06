@@ -48,7 +48,7 @@ E_0 = 20. * I_0  # initial exposed
 # https://www.medrxiv.org/content/10.1101/2020.01.23.20018549v1.full.pdf
 
 
-R_0 = web_scraping.acumulados + web_scraping.acumuladosmortos_acumulados # initial recovered (not to be confused with R_zero, below)
+R_0 = web_scraping.acumulados + web_scraping.mortos_acumulados # initial recovered (not to be confused with R_zero, below)
 # initially, no one has recovered
 
 c = 0.0  # no mutation (yet)
