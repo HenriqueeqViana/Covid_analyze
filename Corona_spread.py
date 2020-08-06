@@ -37,18 +37,18 @@ import parametros as parameters
 from scipy import integrate
 from Covid_model import seir_function
 import matplotlib.pyplot as plt
+import web_scraping 
+Populacao_0=211855588
+S_0 =Populacao_0 - web_scraping.acumulados  # Sucetiveis= populaocao2020-casosacumulados
 
-
-S_0 = 11.0e+6  # Wuhan city  excluding initial infected, exposed population,
-
-I_0 = 40.0  # initial infected from market
+I_0 = web_scraping.acumulados # Infectados acumulado
 # https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/newsâ€“wuhan-coronavirus/
 
 E_0 = 20. * I_0  # initial exposed
 # https://www.medrxiv.org/content/10.1101/2020.01.23.20018549v1.full.pdf
 
 
-R_0 = 0  # initial recovered (not to be confused with R_zero, below)
+R_0 = web_scraping.acumulados # initial recovered (not to be confused with R_zero, below)
 # initially, no one has recovered
 
 c = 0.0  # no mutation (yet)
@@ -80,11 +80,11 @@ gamma = 1. / 18.  # https://www.imperial.ac.uk/mrc-global-infectious-disease-ana
              piecewise constant values for R_zero
 """
 r_zero_array = np.zeros([6, 2])
-r_zero_array[0, :] = [0.0,  3.0]# t=0 days    R_zero = 3.0
-r_zero_array[1, :] = [20.0,  2.6]# t = 60 days R_zero = 2.6
-r_zero_array[2, :] = [70.0,  1.9]# t = 70 days R_zero = 1.9
-r_zero_array[3, :] = [84.0,  1.0]# t = 84 days R_zero = 1.0
-r_zero_array[4, :] = [90.0,  .50]# t = 90 days R_zero = .50
+r_zero_array[0, :] = [0.0,  1.4]# t=0 days    R_zero = 1.4
+r_zero_array[1, :] = [20.0,  1.4]# t = 60 days R_zero = 1.4
+r_zero_array[2, :] = [70.0,  1.4]# t = 70 days R_zero = 1.4
+r_zero_array[3, :] = [84.0,  1.4]# t = 84 days R_zero = 1.4
+r_zero_array[4, :] = [90.0,  1.0]# t = 90 days R_zero = .50
 r_zero_array[5, :] = [1000, .50]# t = 1000 days R_zero =.50
 
 params = parameters.Params(c, N, sigma, gamma, r_zero_array)
@@ -131,7 +131,7 @@ axes[0].set(xlabel="time (days)", ylabel="I: infectious")
 axes[1].set(xlabel="time (days)", ylabel="R: recovered")
 axes[0].legend()
 axes[1].legend()
-plt.savefig('output/infectious.png')
+plt.savefig('C:\\Users\\henri\\Desktop\\Backup\\CT e Inovação\\Ideias\\Project_Covid\\Covid_analyze\\infectious.png')
 plt.show()
 
 total_cases = y[:, 1] + y[:, 2] + y[:, 3]
@@ -142,7 +142,7 @@ ax.plot(tspan, total_cases, color="b", label="E+I+R: Total cases")
 ax.plot(tspan, total_cases_active, color="r", label="E+I: Active cases")
 ax.set(xlabel="time (days)", ylabel="Patients", title='Cumulative and active cases')
 plt.legend()
-plt.savefig('output/total_cases.png')
+plt.savefig('C:\\Users\\henri\\Desktop\\Backup\\CT e Inovação\\Ideias\\Project_Covid\\Covid_analyze\\total_cases.png')
 plt.show()
 
 nsteps = np.size(tspan)
