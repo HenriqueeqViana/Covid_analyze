@@ -84,7 +84,7 @@ r_zero_array[0, :] = [0.0,  1.4]# t=0 days    R_zero = 1.4
 r_zero_array[1, :] = [20.0,  1.4]# t = 60 days R_zero = 1.4
 r_zero_array[2, :] = [70.0,  1.4]# t = 70 days R_zero = 1.4
 r_zero_array[3, :] = [84.0,  1.4]# t = 84 days R_zero = 1.4
-r_zero_array[4, :] = [90.0,  1.0]# t = 90 days R_zero = .50
+r_zero_array[4, :] = [90.0,  1.0]# t = 90 days R_zero = 1.0
 r_zero_array[5, :] = [1000, .50]# t = 1000 days R_zero =.50
 
 params = parameters.Params(c, N, sigma, gamma, r_zero_array)
