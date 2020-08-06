@@ -1,6 +1,6 @@
 
 #código Corona spread retirado de @csdegraff https://github.com/csdegraaf/CoronaVirusModel
-
+#Adaptado por HenriqueeqViana 
 """
 This code is a python version of the oringal Matlab/Octave code from Peter Forsyth
 (see: https://cs.uwaterloo.ca/~paforsyt/SEIR.html)

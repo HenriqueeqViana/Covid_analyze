@@ -1,4 +1,5 @@
 #parâmetros retirados de  https://github.com/csdegraaf/CoronaVirusModel
+#Adaptado por HenriqueeqViana 
 class Params:
     def __init__(self, c, n, sigma, gamma, r_zero):
         self.c = c
