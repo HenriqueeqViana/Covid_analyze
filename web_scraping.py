@@ -5,8 +5,8 @@ import matplotlib as plt
 import os
 import io
 import re
-from io import StringIO
 import requests
+from io import StringIO
 import time
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
