@@ -140,6 +140,7 @@ total_cases_active = y[:, 1] + y[:, 2]
 fig, ax = plt.subplots()
 ax.plot(tspan, total_cases, color="b", label="E+I+R: Total cases")
 ax.plot(tspan, total_cases_active, color="r", label="E+I: Active cases")
+ax.set(xlabel=web_scraping.d)
 ax.set(xlabel="time (days)", ylabel="Patients", title='Cumulative and active cases')
 plt.legend()
 plt.savefig('C:\\Users\\henri\\Desktop\\Backup\\CT e Inovação\\Ideias\\Project_Covid\\Covid_analyze\\total_cases.png')

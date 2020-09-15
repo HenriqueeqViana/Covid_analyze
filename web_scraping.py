@@ -5,7 +5,6 @@ import matplotlib as plt
 import os
 import io
 import re
-import requests
 from io import StringIO
 import requests
 import time
